@@ -25,12 +25,21 @@ ActiveRecord::Schema.define(version: 20170116005359) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string   "superhero_name"
     t.string   "email"
-    t.string   "hashed_password"
+    t.string   "password_digest"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "age"
+    t.string   "sex"
+    t.string   "occupation"
     t.boolean  "admin?"
     t.boolean  "volunteer?"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.boolean  "private_comments?"
+    t.boolean  "private_profile?"
+    t.boolean  "unsubscribed?"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
 end

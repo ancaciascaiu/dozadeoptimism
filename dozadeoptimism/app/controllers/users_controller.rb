@@ -1,8 +1,5 @@
 class UsersController < ApplicationController
-  def index #for the admin to assign quality of admin or volunteer to users
-  	@users = User.all
-  end
-
+  
   def new
     @user = User.new
   end
@@ -10,28 +7,29 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      # Handle a successful save.
+      render 'new'
     else
       render 'new'
     end
   end
 
-  def edit #for editing own info
+  def edit #gets the edit page
     @user = User.find(params[:id])
   end
 
-  def update
-  	# write changes to database
+  def update #post differences to the db
+  	
   end
 
   def destroy
-  	#delete account
+  	@user = User.find(params[:id])
+    @user.destroy
   end
 
   private
 
     def user_params
-      params.require(:user).permit(:email,
-                                   :hashed_password)
+      params.require(:user).permit(:superhero_name, :email,
+                                   :password, :password_confirmation)
     end
 end
