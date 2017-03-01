@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def home
-    render html: "hello, world!"
+    render 'home/index'
   end
 
   def current_user
