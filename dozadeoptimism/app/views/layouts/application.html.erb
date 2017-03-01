@@ -9,7 +9,11 @@
 
 <body>
 	<% if current_user %>
-	  Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+		<% if current_user.first_name && current_user.last_name %>
+	  		Signed in as <%= current_user.first_name %> <%= current_user.last_name %> | <%= link_to "Logout", '/logout' %>
+		<% elsif current_user.superhero_name %>
+			Signed in as <%= current_user.superhero_name %> | <%= link_to "Logout", '/logout' %>
+		<% end %>
 	<% else %>
 	  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
 	<% end %>
