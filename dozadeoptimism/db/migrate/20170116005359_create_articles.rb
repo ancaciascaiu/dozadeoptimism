@@ -3,7 +3,7 @@ class CreateArticles < ActiveRecord::Migration
     create_table :articles do |t|
       t.string :title
       t.string :content
-      t.integer :volunteer_id
+      t.integer :volunteer_id, references: :users, index: true
 
       t.timestamps null: false
     end
