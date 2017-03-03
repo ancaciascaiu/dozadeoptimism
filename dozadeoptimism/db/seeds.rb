@@ -18,4 +18,6 @@ article2 = Article.create(title: "Title for Article 2", content: Faker::Lorem.pa
 article3 = Article.create(title: "Title for Article 3", content: Faker::Lorem.paragraphs, volunteer_id: 3)
 article4 = Article.create(title: "Title for Article 4", content: Faker::Lorem.paragraphs, volunteer_id: 3)
 
-
+categ1 = ChallengeCategory.create(title: "Friendly surprises")
+categ1 = ChallengeCategory.create(title: "Acts of Kindness")
+categ1 = ChallengeCategory.create(title: "Proactive Involvement")
