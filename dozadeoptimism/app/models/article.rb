@@ -4,3 +4,5 @@ class Article < ActiveRecord::Base
 	validates :volunteer_id, presence: true
 	validates :title, :content, presence: true, length: { maximum: 5000 }
 end
+
+
