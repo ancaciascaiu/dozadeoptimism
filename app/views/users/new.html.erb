@@ -1,0 +1,15 @@
+<h3>Sign up!</h3>
+
+<%= form_for :user, url: '/users' do |f| %>
+
+  Superhero Name: <%= f.text_field :superhero_name %>
+  </br>
+  Email: <%= f.text_field :email %>
+  </br>
+  Password: <%= f.password_field :password %>
+  </br>
+  Password Confirmation: <%= f.password_field :password_confirmation %>
+  </br>
+  <%= f.submit "Submit" %>
+
+<% end %>
