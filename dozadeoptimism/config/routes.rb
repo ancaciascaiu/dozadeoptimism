@@ -17,9 +17,10 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
 
   resources :articles #, only: [:create, update, :destroy]?
-  resources :challenge_categories 
-  resources :challenges
-  
+  resources :challenge_categories do
+    resources :challenges, only: :show
+  end
+  resources :challenges, except: :show
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
