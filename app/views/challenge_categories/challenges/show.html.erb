@@ -2,5 +2,15 @@
 
 <h4><%= @challenge.name %></h4>
 <p><%= @challenge.description %></p>
-<p>Points value: <%= @challenge.point_value %></p>
-<p>Duration: <%= @challenge.duration %></p>
+
+<% if @challenge.point_value == 1 %>
+	<p>Value: <%= @challenge.point_value %> dose of optimism</p>
+<% else %>
+	<p>Value: <%= @challenge.point_value %> doses of optimism</p>
+<% end %>
+
+<% if @challenge.duration == 1 %>
+	<p>Duration: <%= @challenge.duration %> day</p>
+<% else %>
+	<p>Duration: <%= @challenge.duration %> days</p>
+<% end %>

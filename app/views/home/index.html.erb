@@ -9,8 +9,6 @@
 <div>
 	<h4>Pick a challenge!</h4>
 	<% @categories.each do |category| %>
-		<% ############!!!!!! make each category link hit the random_challenge path belonging to that specific category! %>
-		<%= p category %>
 		<%= link_to "#{category.title}", challenge_category_path(category.id) %>
 		<%= simple_format "\n" %>
 	<% end %>

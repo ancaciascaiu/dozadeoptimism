@@ -6,7 +6,7 @@ class ChallengeCategoriesController < ApplicationController
 	def show
 		category = ChallengeCategory.find(params[:id])
 		challenges = category.challenges
-		@challenge = challenges.sample(1)[0];
+		@challenge = challenges.sample(1)[0]
 		render 'challenge_categories/challenges/show'
 	end
 end
