@@ -3,15 +3,14 @@
 <div>
 	<p>Welcome! We've been waiting for a superhero who'd like to join our community!</p>
 	<p>Start your transformation!</p>
-	<%= link_to "Make your superhero account!", signup_path %> or <%= link_to "Login", login_path %>
 </div>
 <br />
 
-<% # this will be on every page of the app: %>
 <div>
 	<h4>Pick a challenge!</h4>
 	<% @categories.each do |category| %>
 		<% ############!!!!!! make each category link hit the random_challenge path belonging to that specific category! %>
+		<%= p category %>
 		<%= link_to "#{category.title}", challenge_category_path(category.id) %>
 		<%= simple_format "\n" %>
 	<% end %>
