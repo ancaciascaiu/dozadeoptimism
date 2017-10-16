@@ -8,7 +8,7 @@ class CreateChallenges < ActiveRecord::Migration
       t.string :location
       t.boolean :approved?
       t.integer :admin_id
-      t.integer :challenge_category_id
+      t.integer :category_id
 
       t.timestamps null: false
     end

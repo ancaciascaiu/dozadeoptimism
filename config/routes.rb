@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
 
   resources :articles #, only: [:create, update, :destroy]?
-  resources :challenge_categories do
+  resources :categories do
     resources :challenges, only: :show
   end
   resources :challenges, except: :show

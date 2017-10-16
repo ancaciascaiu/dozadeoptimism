@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20170303182946) do
 
   add_index "articles", ["volunteer_id"], name: "index_articles_on_volunteer_id", using: :btree
 
-  create_table "challenge_categories", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -40,9 +40,9 @@ ActiveRecord::Schema.define(version: 20170303182946) do
     t.string   "location"
     t.boolean  "approved?"
     t.integer  "admin_id"
-    t.integer  "challenge_category_id"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|

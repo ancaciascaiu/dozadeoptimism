@@ -9,7 +9,7 @@
 <div>
 	<h4>Pick a challenge!</h4>
 	<% @categories.each do |category| %>
-		<%= link_to "#{category.title}", challenge_category_path(category.id) %>
+		<%= link_to "#{category.title}", category_path(category.id) %>
 		<%= simple_format "\n" %>
 	<% end %>
 </div>
